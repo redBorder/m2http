@@ -1,0 +1,22 @@
+pipeline:
+  queue: 100                      # Max internal queue size
+  backoff: 15                     # Time to wait between retries in seconds
+  retries: 1                      # Number of retries on fail (-1 not limited)
+
+mqtt:
+  broker: "localhost"             # MQTT brokers
+  port: 1883                      # MQTT broker port
+  clientid: "m2http"              # Client ID
+  topics:                         # MQTT topics to listen
+    - rb_nmsp
+    - rb_radius
+    - rb_flow
+    - rb_loc
+    - rb_monitor
+    - rb_state
+    - rb_social
+
+http:
+  workers: 1
+  url: "http://localhost:8888/test"    # Number of workers, one connection per worker
+  insecure: false                 # Skip SSL verification
