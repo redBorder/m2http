@@ -1,0 +1,12 @@
+package: github.com/redBorder/m2http
+import:
+- package: github.com/Sirupsen/logrus
+  version: ^0.10.0
+- package: github.com/eclipse/paho.mqtt.golang
+  version: ^1.0.0
+- package: github.com/redBorder/rbforwarder
+  version: ^0.5.0
+  subpackages:
+  - components/httpsender
+- package: github.com/x-cray/logrus-prefixed-formatter
+- package: gopkg.in/yaml.v2
