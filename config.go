@@ -122,6 +122,11 @@ func loadMQTTConfig() MQTTConfig {
 	} else {
 		logger.Fatal("Invalid 'port' option")
 	}
+	if clientID, ok := mqttConfig["clientid"].(string); ok {
+		config.ClientID = clientID
+	} else {
+		logger.Fatal("Invalid 'clientid' option")
+	}
 	if topics, ok := mqttConfig["topics"].([]interface{}); ok {
 		for _, topic := range topics {
 			config.Topics = append(config.Topics, topic.(string))
