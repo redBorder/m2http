@@ -1,0 +1,8 @@
+m2http
+*.out
+*.coverprofile
+*.sublime-project
+*.sublime-workspace
+*.a
+*.h
+vendor/
