@@ -4,6 +4,23 @@ m2http is a application that forwards messages from MQTT to an HTTP
 endpoint using [rbforwarder](https://github.com/redBorder/rbforwarder)
 package.
 
+You can modify messages before send them via HTTP on the callback:
+
+```go
+mqttHandler := NewMQTTHandler(loadMQTTConfig(),
+  func(client MQTT.Client, msg MQTT.Message) {
+    opts := map[string]interface{}{
+      "http_endpoint": msg.Topic(),
+    }
+
+    // Do something with the message
+    data := msg.Payload()
+
+    f.Produce(data, opts, nil)
+  },
+)
+```
+
 ## Installing
 
 To install this application ensure you have **glide** installed.
