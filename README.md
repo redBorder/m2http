@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/redBorder/m2http.svg?branch=master)](https://travis-ci.org/redBorder/m2http)
+[![Go Report Card](https://goreportcard.com/badge/github.com/redBorder/m2http)](https://goreportcard.com/report/github.com/redBorder/m2http)
+
 # m2http
 
 m2http is a application that forwards messages from MQTT to an HTTP
