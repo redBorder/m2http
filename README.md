@@ -23,7 +23,8 @@ mqttHandler := NewMQTTHandler(loadMQTTConfig(),
 
 ## Installing
 
-To install this application ensure you have **glide** installed.
+To install this application ensure you have the `GOPATH` environment variable
+set and **[glide](https://glide.sh/)** installed.
 
 ```bash
 curl https://glide.sh/get | sh
@@ -34,13 +35,12 @@ And then:
 1. Clone this repo and cd to the project
 
     ```bash
-    git clone https://github.com/redBorder/m2http.git
-    cd m2http
+    git clone https://github.com/redBorder/m2http.git && cd m2http
     ```
-2. Install dependencies
+2. Install dependencies and compile
 
     ```bash
-    glide update
+    make
     ```
 3. Install on desired directory
 
